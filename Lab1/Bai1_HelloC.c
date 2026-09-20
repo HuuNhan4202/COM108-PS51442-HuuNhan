@@ -1,6 +1,6 @@
 #include <stdio.h>
-int main (){
-    printf("Lại Nguyễn Hữu Nhân\n");
-    printf("PS51442");
+int main(){
+    printf("Lai Nguyen Huu Nhan\n");
+    printf("PS51442\n");
     return 0;
 }
