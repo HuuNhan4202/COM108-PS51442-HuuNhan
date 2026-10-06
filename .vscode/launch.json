@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/Code/COM101-PS51442-HuuNhan/Lab1",
-      "program": "d:/Code/COM101-PS51442-HuuNhan/Lab1/build/Debug/outDebug",
+      "cwd": "d:/Code/COM101-PS51442-HuuNhan/Lab3",
+      "program": "d:/Code/COM101-PS51442-HuuNhan/Lab3/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
