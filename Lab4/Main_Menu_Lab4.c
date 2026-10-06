@@ -1,5 +1,5 @@
 #include <stdio.h>
-void tinhTrungBinhSoChan(void) {
+void tinhTrungBinhSoChan() {
     int min, max, tong = 0, bienDem = 0;
     printf("Nhap min: "); scanf("%d", &min);
     printf("Nhap max: "); scanf("%d", &max);
@@ -21,7 +21,7 @@ void tinhTrungBinhSoChan(void) {
         printf("Khong co so nao chia het cho 2 trong khoang da nhap!\n");
     }
 }
-void kiemTraSoNguyenTo(void) {
+void kiemTraSoNguyenTo() {
     int x, laSoNguyenTo = 1;
     printf("Nhap so nguyen x: "); scanf("%d", &x);
     if (x < 2) {
@@ -37,7 +37,7 @@ void kiemTraSoNguyenTo(void) {
     if (laSoNguyenTo) printf("%d la so nguyen to.\n", x);
     else printf("%d khong phai la so nguyen to.\n", x);
 }
-void kiemTraSoChinhPhuong(void) {
+void kiemTraSoChinhPhuong() {
     int x, isSoChinhPhuong = 0;
     printf("Nhap so nguyen x: "); scanf("%d", &x);
 
@@ -56,7 +56,7 @@ void kiemTraSoChinhPhuong(void) {
     if (isSoChinhPhuong) printf("%d la so chinh phuong.\n", x);
     else printf("%d khong phai la so chinh phuong.\n", x);
 }
-int main(void) {
+int main() {
     int luaChon;
     do {
         printf("\n+---------------------------------------------------+\n");
