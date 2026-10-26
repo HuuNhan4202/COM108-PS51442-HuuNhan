@@ -118,6 +118,22 @@ int timUCLN(int a, int b) {
     }
     void TinhLaiSuatVayTraGop(){
         printf("Tinh lai suat vay tra gop\n");
+        double tienVay;
+        printf("Nhap so tien muon vay: ");
+        scanf("%lf", &tienVay);
+
+        double gocPhaiTra = tienVay / 12;
+        double tienConLai = tienVay;
+
+        printf("\n%-10s %-15s %-15s %-15s %-15s\n", "Ky han", "Lai phai tra", "Goc phai tra", "Tong phai tra", "Con lai");
+    for (int i = 1; i <= 12; i++) {
+        double laiPhaiTra = tienConLai * 0.05; // Lai 5%/thang
+        double tongPhaiTra = gocPhaiTra + laiPhaiTra;
+        tienConLai -= gocPhaiTra;
+        if (tienConLai < 0) tienConLai = 0;
+
+        printf("%-10d %-15.0f %-15.0f %-15.0f %-15.0f\n", i, laiPhaiTra, gocPhaiTra, tongPhaiTra, tienConLai);
+    }
     }
     void VayTienMuaXe(){
         printf("Vay tien mua xe\n");
