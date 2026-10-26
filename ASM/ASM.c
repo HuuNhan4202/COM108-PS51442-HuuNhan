@@ -52,12 +52,69 @@ int timUCLN(int a, int b) {
     } 
     void TinhTienKaraoke(){
         printf("Tinh tien Karaoke\n");
+         int gioBD, gioKT;
+    printf("Nhap gio bat dau (12h - 23h): ");
+    scanf("%d", &gioBD);
+    printf("Nhap gio ket thuc (12h - 23h): ");
+    scanf("%d", &gioKT);
+
+    if (gioBD < 12 || gioKT > 23 || gioBD >= gioKT){
+        printf("Gio khong hop le!\n");
+        return;
+    }
+
+    int tongGio = gioKT - gioBD;
+    double tongTien = 0;
+
+    if (tongGio <= 3) {
+        tongTien = tongGio * 150000;
+    } else {
+        tongTien = 3 * 150000 + (tongGio - 3) * 150000 * 0.7;
+    }
+    if (gioBD >= 14 && gioBD <= 17) {
+        tongTien = tongTien * 0.9;
+    }
+
+    printf("Tong tien can thanh toan: %.0f VND\n", tongTien);
     }
     void TinhTienDien(){
         printf("Tinh tien dien\n");
+        double kWh, tienDien = 0;
+    printf("Nhap so kWh dien su dung: ");
+    scanf("%lf", &kWh);
+
+    if (kWh <= 50) {
+        tienDien = kWh * 1678;
+    } else if (kWh <= 100) {
+        tienDien = 50 * 1678 + (kWh - 50) * 1734;
+        } else if (kWh <= 200) {
+        tienDien = 50 * 1678 + 50 * 1734 + (kWh - 100) * 2014;
+    } else if (kWh <= 300) {
+        tienDien = 50 * 1678 + 50 * 1734 + 100 * 2014 + (kWh - 200) * 2536;
+    } else if (kWh <= 400) {
+        tienDien = 50 * 1678 + 50 * 1734 + 100 * 2014 + 100 * 2536 + (kWh - 300) * 2834;
+    } else {
+        tienDien = 50 * 1678 + 50 * 1734 + 100 * 2014 + 100 * 2536 + 100 * 2834 + (kWh - 400) * 2927;
+    }
+
+    printf("Tien dien phai tra: %.0f VND\n", tienDien);
     }
     void DoiTien(){
         printf("Doi tien\n");
+         int soTien;
+    int menhGia[] = {500, 200, 100, 50, 20, 10, 5, 2, 1};
+
+    printf("Nhap so tien: ");
+    scanf("%d", &soTien);
+
+    printf("Ket qua doi tien: ");
+    for (int i = 0; i < 9; i++) {
+        int soTo = soTien / menhGia[i];
+        if (soTo > 0) {
+            printf("%d to menh gia %d\n", soTo, menhGia[i]);
+            soTien %= menhGia[i];
+        }
+    }
     }
     void TinhLaiSuatVayTraGop(){
         printf("Tinh lai suat vay tra gop\n");
